@@ -41,7 +41,7 @@ TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOOTLOADER_LIBS := \
 	libboot_board_surf \
-	libboot_arch_qsd8k \
+	libboot_arch_msm7k \
 	libboot_arch_armv6
 
 TARGET_BOOTLOADER_LINK_SCRIPT := \
