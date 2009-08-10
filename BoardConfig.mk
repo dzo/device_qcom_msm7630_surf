@@ -41,10 +41,10 @@ TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOOTLOADER_LIBS := \
 	libboot_board_surf \
-	libboot_arch_msm7k \
+	libboot_arch_qsd8k \
 	libboot_arch_armv6
 
 TARGET_BOOTLOADER_LINK_SCRIPT := \
 	vendor/qcom/$(TARGET_PRODUCT)/boot/boot.ld
 
-BOARD_KERNEL_CMDLINE := mem=88M console=ttyDCC0 ip=dhcp androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE := mem=139M console=ttyDCC0 androidboot.hardware=qcom

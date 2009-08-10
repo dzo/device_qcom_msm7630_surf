@@ -20,6 +20,8 @@ global &RAMDISK_SIZE
 global &SECOND_STAGE_ADDR
 global &SYSTEM_IMG_ADDR
 global &SYSTEM_IMG_SIZE
+global &SYSTEM_PHY_BASE_ADDR
+global &SYSTEM_HDR_ADDR
 
 ; misc
 global &MACHINE_ID
@@ -40,11 +42,13 @@ global &NANDWRITE
 ; configure your memory layout, binary images, and commandline below:
 ; ----------------------------------------------------------------------
 
-&KERNEL_ADDR=        0x00208000
-&RAMDISK_ADDR=       0x01200000
-&TAGS_ADDR=          0x00200100
-&SECOND_STAGE_ADDR=  0x00300000
-&SYSTEM_IMG_ADDR=    0x01200000
+&SYSTEM_PHY_BASE_ADDR=  0x00200000
+&SECOND_STAGE_ADDR=     0x00300000
+&KERNEL_ADDR=           &SYSTEM_PHY_BASE_ADDR+0x00008000
+&RAMDISK_ADDR=          &SYSTEM_PHY_BASE_ADDR+0x01000000
+&TAGS_ADDR=             &SYSTEM_PHY_BASE_ADDR+0x00000100
+&SYSTEM_IMG_ADDR=       &SYSTEM_PHY_BASE_ADDR+0x01000000
+&SYSTEM_HDR_ADDR=       &SYSTEM_PHY_BASE_ADDR+0x00001000
 
 ;&MACHINE_ID=         0x59f ; halibut
 ;&MACHINE_ID=         0x5a0 ; trout
@@ -55,7 +59,7 @@ global &NANDWRITE
 &KERNEL_SRC=         "&(TOP)../kernel/"
 ;&KERNEL_SRC=         "/scratch/linux-msm/"
 ;&KERNEL_SRC=         "/work/kernel/mergebox/"
-&KERNEL=             "&(KERNEL_SRC)arch/arm/boot/Image"
+&KERNEL=             "&(KERNEL_SRC)arch/arm/boot/zImage"
 &KERNEL_ELF=         "&(KERNEL_SRC)vmlinux"
 
 &SECOND_STAGE=""
