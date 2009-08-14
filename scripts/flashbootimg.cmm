@@ -14,7 +14,7 @@ if state.run()
   break
 
 &pagesize=0x800
-&hdr=0x00201000
+&hdr=&SYSTEM_HDR_ADDR
 
 ; 000 magic
 ; 008 kernel_size

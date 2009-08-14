@@ -50,7 +50,7 @@ else
   (
     if y.exist("\\flashimg")
       symbol.delete \\flashimg
-    data.load.binary &arg_img 0x00201000 /name flashimg /noclear
+    data.load.binary &arg_img &SYSTEM_HDR_ADDR /name flashimg /noclear
     &img_size=y.sizeof("\\flashimg")
   )
   else
@@ -63,7 +63,7 @@ else
 
 if ("&arg_extra"!="dont_flash")
 (
-  do debug &arg_ptn 0x00201000 &img_size
+  do debug &arg_ptn &SYSTEM_HDR_ADDR &img_size
 )
 
 entry &result
