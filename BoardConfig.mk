@@ -47,4 +47,6 @@ TARGET_BOOTLOADER_LIBS := \
 TARGET_BOOTLOADER_LINK_SCRIPT := \
 	vendor/qcom/$(TARGET_PRODUCT)/boot/boot.ld
 
-BOARD_KERNEL_CMDLINE := mem=139M console=ttyDCC0 androidboot.hardware=qcom
+NAND_PAGE_SIZE := 4096
+
+BOARD_KERNEL_CMDLINE := mem=201M console=ttyDCC0 androidboot.hardware=qcom

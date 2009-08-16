@@ -29,10 +29,10 @@ if ("&arg_ptn"=="")
 
 if ("&arg_extra"!="again")
 (
-;;  sys.down
-;;  sys.cpu scorpion
-;;  sys.jtagclock rtck
-;;  sys.mode attach
+  sys.down
+  sys.cpu scorpion
+  sys.jtagclock rtck
+  sys.mode attach
   if state.run()
   (
     break
