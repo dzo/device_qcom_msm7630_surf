@@ -49,4 +49,4 @@ TARGET_BOOTLOADER_LINK_SCRIPT := \
 
 NAND_PAGE_SIZE := 4096
 
-BOARD_KERNEL_CMDLINE := mem=201M console=ttyDCC0 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE := mem=198M console=ttyDCC0 androidboot.hardware=qcom
