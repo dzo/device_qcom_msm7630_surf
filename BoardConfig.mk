@@ -22,6 +22,7 @@
 ifeq ($(QC_PROP),true)
     BOARD_USES_QCOM_HARDWARE := true
     BOARD_USES_QCOM_7x_CHIPSET := true
+    BOARD_USES_ADRENO_200 := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_GPS_LIBRARIES := libloc_api
@@ -48,5 +49,6 @@ TARGET_BOOTLOADER_LINK_SCRIPT := \
 	vendor/qcom/$(TARGET_PRODUCT)/boot/boot.ld
 
 NAND_PAGE_SIZE := 4096
+TARGET_CPU_ABI := armeabi
 
 BOARD_KERNEL_CMDLINE := mem=198M console=ttyDCC0 androidboot.hardware=qcom
