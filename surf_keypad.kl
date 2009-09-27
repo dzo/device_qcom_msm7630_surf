@@ -103,3 +103,4 @@ key 114   VOLUME_DOWN       WAKE_DROPPED
 # Numeric keypad
 key 522   STAR              WAKE_DROPPED
 key 532   POUND             WAKE_DROPPED
+key 355   DEL               WAKE_DROPPED
