@@ -50,5 +50,7 @@ TARGET_BOOTLOADER_LINK_SCRIPT := \
 
 NAND_PAGE_SIZE := 4096
 TARGET_CPU_ABI := armeabi
+TARGET_BOARD_PLATFORM := msm7k
+
 
 BOARD_KERNEL_CMDLINE := mem=198M console=ttyDCC0 androidboot.hardware=qcom
