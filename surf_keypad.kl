@@ -85,9 +85,9 @@ key 63    ENDCALL           WAKE_DROPPED
 
 # Row 6
 key 52    SHIFT_LEFT        WAKE_DROPPED
-key 464   UNKNOWN           WAKE_DROPPED
-key 29    UNKNOWN           WAKE_DROPPED
-key 56    UNKNOWN           WAKE_DROPPED
+key 464   MENU              WAKE_DROPPED
+key 29    MENU              WAKE_DROPPED
+key 56    MENU              WAKE_DROPPED
 key 151   MENU              WAKE_DROPPED
 key 57    SPACE             WAKE_DROPPED
 key 111   DEL               WAKE_DROPPED
