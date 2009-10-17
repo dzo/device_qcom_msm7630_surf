@@ -29,6 +29,7 @@ ifeq ($(QC_PROP),true)
     BOARD_GPS_LIBRARIES := libloc_api
     BOARD_CAMERA_LIBRARIES := libcamera
     BOARD_HAVE_BLUETOOTH := true
+    BOARD_WPA_SUPPLICANT_DRIVER := WEXT
     endif   # !BUILD_TINY_ANDROID
 
 else
