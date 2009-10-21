@@ -70,7 +70,7 @@ key 28    DPAD_CENTER       WAKE_DROPPED
 key 109   DPAD_DOWN         WAKE_DROPPED
 
 # Row 5
-key 139   SYM               WAKE_DROPPED
+key 183   SYM               WAKE_DROPPED
 key 44    Z                 WAKE_DROPPED
 key 45    X                 WAKE_DROPPED
 key 46    C                 WAKE_DROPPED
@@ -102,5 +102,9 @@ key 114   VOLUME_DOWN       WAKE_DROPPED
 
 # Numeric keypad
 key 522   STAR              WAKE_DROPPED
-key 532   POUND             WAKE_DROPPED
+key 523   POUND             WAKE_DROPPED
 key 355   DEL               WAKE_DROPPED
+#L- Mapping
+key 139   MENU              WAKE
+#SEND Key Mapping
+key 231   CALL              WAKE_DROPPED
