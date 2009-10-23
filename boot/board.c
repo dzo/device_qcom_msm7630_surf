@@ -47,7 +47,29 @@ const char *board_cmdline(void)
 
 unsigned board_machtype(void)
 {
-    return 1007016;   // 7630 SURF
+    struct smem_build_id *modem_build_id;
+    unsigned int build_id_struct_len = 0;
+    unsigned int platform_type = 0;
+
+    modem_build_id =
+           (struct smem_build_id*)smem_get_entry( SMEM_BUILD_ID_LOCATION,
+                                               &build_id_struct_len );
+    if (modem_build_id->format == 3)
+    {
+        platform_type = modem_build_id->hw_platform;
+        switch (platform_type)
+	{
+	  case HW_PLATFORM_SURF:
+	    return 1007016;
+	  case HW_PLATFORM_FFA:
+	    return 1007017;
+	  case HW_PLATFORM_FLUID:
+	    return 1007018;
+	  default:
+            return 1007016;   // 7630 SURF
+	}
+    }
+    return 1007016;
 }
 
 void board_init()
