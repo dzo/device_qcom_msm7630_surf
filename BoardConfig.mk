@@ -23,11 +23,13 @@ ifeq ($(QC_PROP),true)
     BOARD_USES_QCOM_HARDWARE := true
     BOARD_USES_QCOM_7x_CHIPSET := true
     BOARD_USES_ADRENO_200 := true
+    BOARD_USES_QCOM_AUDIO_V2 := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_GPS_LIBRARIES := libloc_api
     BOARD_CAMERA_LIBRARIES := libcamera
     BOARD_HAVE_BLUETOOTH := true
+    BOARD_WPA_SUPPLICANT_DRIVER := WEXT
     endif   # !BUILD_TINY_ANDROID
 
 else
@@ -53,4 +55,4 @@ TARGET_CPU_ABI := armeabi
 TARGET_BOARD_PLATFORM := msm7k
 
 
-BOARD_KERNEL_CMDLINE := mem=198M console=ttyDCC0 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE := console=ttyMSM2,115200n8 androidboot.hardware=qcom
