@@ -13,45 +13,25 @@
 # limitations under the License.
 #
 
-#
 # config.mk
 #
 # Product-specific compile-time definitions.
 #
 
-ifeq ($(QC_PROP),true)
-    BOARD_USES_QCOM_HARDWARE := true
-    BOARD_USES_ADRENO_200 := true
-    BOARD_USES_QCOM_AUDIO_V2 := true
-
-    ifneq ($(BUILD_TINY_ANDROID), true)
-    BOARD_GPS_LIBRARIES := libloc_api
-    BOARD_CAMERA_LIBRARIES := libcamera
-    BOARD_HAVE_BLUETOOTH := true
-    BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-    endif   # !BUILD_TINY_ANDROID
-
-else
-    BOARD_USES_GENERIC_AUDIO := true
-    USE_CAMERA_STUB := true
-
-endif # QC_PROP
+USE_CAMERA_STUB := true
 
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := false
+TARGET_NO_KERNEL := true
 TARGET_NO_RADIOIMAGE := true
 
-TARGET_BOOTLOADER_LIBS := \
-	libboot_board_surf \
-	libboot_arch_qsd8k \
-	libboot_arch_armv6
-
-TARGET_BOOTLOADER_LINK_SCRIPT := \
-	vendor/qcom/$(TARGET_PRODUCT)/boot/boot.ld
-
-NAND_PAGE_SIZE := 4096
+TARGET_GLOBAL_CFLAGS += -mfpu=vfp -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=vfp -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi
+TARGET_ARCH_VARIANT := armv7-a
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+TARGET_HARDWARE_3D := false
+TARGET_NAND_PAGE_SIZE := 4096
 TARGET_BOARD_PLATFORM := msm7k
 
-
-BOARD_KERNEL_CMDLINE := console=ttyMSM2,115200n8 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=qcom
