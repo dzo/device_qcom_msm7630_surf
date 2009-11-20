@@ -1,11 +1,15 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
-#
-# Overrides
-PRODUCT_NAME := msm7630_surf
-PRODUCT_DEVICE := msm7630_surf
-
 PRODUCT_PACKAGES := \
     IM \
     VoiceDialer \
-    SdkSetup \
-    FM
+    SdkSetup
+
+
+$(call inherit-product, build/target/product/generic.mk)
+
+#Enabling Ring Tones
+include frameworks/base/data/sounds/OriginalAudio.mk
+
+# Overrides
+PRODUCT_BRAND := qcom
+PRODUCT_NAME := msm7630_surf
+PRODUCT_DEVICE := msm7630_surf
