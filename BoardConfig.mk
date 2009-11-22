@@ -24,8 +24,8 @@ TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
 
-TARGET_GLOBAL_CFLAGS += -mfpu=vfp -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=vfp -mfloat-abi=softfp
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi
 TARGET_ARCH_VARIANT := armv7-a
 ARCH_ARM_HAVE_TLS_REGISTER := true
