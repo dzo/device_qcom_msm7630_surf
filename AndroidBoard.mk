@@ -16,6 +16,25 @@
 
 LOCAL_PATH := $(call my-dir)
 
+#----------------------------------------------------------------------
+# Compile (L)ittle (K)ernel bootloader
+#----------------------------------------------------------------------
+ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
+  INSTALLED_BOOTLOADER_TARGET := $(PRODUCT_OUT)/bootloader
+else
+  INSTALLED_BOOTLOADER_TARGET :=
+endif
+
+include bootable/bootloader/lk/AndroidBoot.mk
+
+file := $(INSTALLED_BOOTLOADER_TARGET)
+ALL_PREBUILT += $(file)
+$(file): $(TARGET_BOOTLOADER) | $(ACP)
+      $(transform-prebuilt-to-target)
+
+#----------------------------------------------------------------------
+# Compile Linux Kernel
+#----------------------------------------------------------------------
 ifeq ($(KERNEL_DEFCONFIG),)
     KERNEL_DEFCONFIG := msm7630_defconfig
 endif
