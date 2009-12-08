@@ -33,6 +33,22 @@ $(file): $(TARGET_BOOTLOADER) | $(ACP)
       $(transform-prebuilt-to-target)
 
 #----------------------------------------------------------------------
+# Compile nandwrite utility
+#----------------------------------------------------------------------
+ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
+  INSTALLED_NANDWRITE_TARGET := $(PRODUCT_OUT)/nandwrite
+else
+  INSTALLED_NANDWRITE_TARGET :=
+endif
+
+include bootable/bootloader/lk/AndroidBoot.mk
+
+file := $(INSTALLED_NANDWRITE_TARGET)
+ALL_PREBUILT += $(file)
+$(file) : $(TARGET_NANDWRITE) | $(ACP)
+	$(transform-prebuilt-to-target)
+
+#----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
 ifeq ($(KERNEL_DEFCONFIG),)

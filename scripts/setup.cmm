@@ -68,7 +68,7 @@ global &NANDWRITE
 
 &RAMDISK=            "&(OUT)ramdisk.img"
 &SYSTEM_IMG=         "&(OUT)system.img"
-&NANDWRITE=          "&(OUT)obj/EXECUTABLES/nandwrite_intermediates/nandwrite.elf"
+&NANDWRITE=          "&(OUT)nandwrite"
 
 ;&CMDLINE=         "mem=50M"
 ;&CMDLINE=         "mem=64M"
