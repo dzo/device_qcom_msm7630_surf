@@ -17,36 +17,26 @@
 LOCAL_PATH := $(call my-dir)
 
 #----------------------------------------------------------------------
-# Compile (L)ittle (K)ernel bootloader
+# Compile (L)ittle (K)ernel bootloader and the nandwrite utility
 #----------------------------------------------------------------------
 ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
-  INSTALLED_BOOTLOADER_TARGET := $(PRODUCT_OUT)/bootloader
-else
-  INSTALLED_BOOTLOADER_TARGET :=
-endif
 
+# Compile
 include bootable/bootloader/lk/AndroidBoot.mk
 
+INSTALLED_BOOTLOADER_TARGET := $(PRODUCT_OUT)/bootloader
 file := $(INSTALLED_BOOTLOADER_TARGET)
 ALL_PREBUILT += $(file)
 $(file): $(TARGET_BOOTLOADER) | $(ACP)
-      $(transform-prebuilt-to-target)
+	$(transform-prebuilt-to-target)
 
-#----------------------------------------------------------------------
-# Compile nandwrite utility
-#----------------------------------------------------------------------
-ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
-  INSTALLED_NANDWRITE_TARGET := $(PRODUCT_OUT)/nandwrite
-else
-  INSTALLED_NANDWRITE_TARGET :=
-endif
-
-include bootable/bootloader/lk/AndroidBoot.mk
-
+# Copy nandwrite utility to target out directory
+INSTALLED_NANDWRITE_TARGET := $(PRODUCT_OUT)/nandwrite
 file := $(INSTALLED_NANDWRITE_TARGET)
 ALL_PREBUILT += $(file)
 $(file) : $(TARGET_NANDWRITE) | $(ACP)
 	$(transform-prebuilt-to-target)
+endif
 
 #----------------------------------------------------------------------
 # Compile Linux Kernel
