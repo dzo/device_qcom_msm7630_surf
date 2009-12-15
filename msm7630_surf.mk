@@ -1,7 +1,8 @@
 PRODUCT_PACKAGES := \
     IM \
     VoiceDialer \
-    SdkSetup
+    SdkSetup \
+    FM
 
 
 $(call inherit-product, build/target/product/generic.mk)
