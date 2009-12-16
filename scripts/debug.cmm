@@ -17,6 +17,7 @@ entry &cmd &arg0 &arg1 &arg2
 area
 
 print
+wait 3.s
 mainloop:
 
 b.reset
