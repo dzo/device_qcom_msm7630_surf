@@ -65,3 +65,7 @@ $(file) : $(LOCAL_PATH)/7k_handset.kl | $(ACP)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := surf_keypad.kcm
 include $(BUILD_KEY_CHAR_MAP)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := surf_keypad_numeric.kcm
+include $(BUILD_KEY_CHAR_MAP)
