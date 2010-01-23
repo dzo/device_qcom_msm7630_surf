@@ -57,6 +57,11 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/surf_keypad.kl | $(ACP)
 	$(transform-prebuilt-to-target)
 
+file := $(TARGET_OUT_KEYLAYOUT)/msm_tma300_ts.kl
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/msm_tma300_ts.kl | $(ACP)
+	$(transform-prebuilt-to-target)
+
 file := $(TARGET_OUT_KEYLAYOUT)/7k_handset.kl
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/7k_handset.kl | $(ACP)
