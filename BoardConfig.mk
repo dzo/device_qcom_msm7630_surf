@@ -25,6 +25,7 @@ ifeq ($(QC_PROP),true)
     BOARD_USE_QCOM_TESTONLY := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
+    BOARD_GPS_LIBRARIES := libloc
     BOARD_CAMERA_LIBRARIES := libcamera
     BOARD_HAVE_BLUETOOTH := true
     BOARD_HAS_QCOM_WLAN := true
