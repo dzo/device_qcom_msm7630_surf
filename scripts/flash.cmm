@@ -71,7 +71,7 @@ else
     if y.exist("\\flashimg")
       symbol.delete \\flashimg
     data.load.binary &arg_img &load_addr /name flashimg /noclear
-    &img_size=y.sizeof("\\flashimg")
+    &img_size=os.file.size(&arg_img)
   )
   else
   (
