@@ -63,7 +63,7 @@ $(file) : $(LOCAL_PATH)/7k_handset.kl | $(ACP)
 	$(transform-prebuilt-to-target)
 
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := surf_keypad.kcm
+LOCAL_SRC_FILES := surf_keypad_qwerty.kcm
 include $(BUILD_KEY_CHAR_MAP)
 
 include $(CLEAR_VARS)
