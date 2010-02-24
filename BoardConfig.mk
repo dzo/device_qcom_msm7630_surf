@@ -62,5 +62,7 @@ BOARD_NAND_PAGE_SIZE := 4096
 
 TARGET_USERIMAGES_USE_EXT2 := true
 
+TARGET_USES_2G_VM_SPLIT := true
+
 BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=qcom
 BOARD_EGL_CFG := vendor/qcom/$(TARGET_PRODUCT)/egl.cfg
