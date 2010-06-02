@@ -52,6 +52,9 @@ ALL_PREBUILT += $(file)
 $(file) : $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
 
+#----------------------------------------------------------------------
+# Key mappings
+#----------------------------------------------------------------------
 file := $(TARGET_OUT_KEYLAYOUT)/surf_keypad.kl
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/surf_keypad.kl | $(ACP)
@@ -79,3 +82,16 @@ include $(BUILD_KEY_CHAR_MAP)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := surf_keypad_numeric.kcm
 include $(BUILD_KEY_CHAR_MAP)
+
+#----------------------------------------------------------------------
+# Splash screen
+#----------------------------------------------------------------------
+ifneq ($(BUILD_TINY_ANDROID), true)
+RGB2565 := $(HOST_OUT_EXECUTABLES)/rgb2565$(HOST_EXECUTABLE_SUFFIX)
+init_splash := $(TARGET_ROOT_OUT)/initlogo.rle
+
+$(init_splash): $(LOCAL_PATH)/initlogo.png | $(RGB2565)
+	convert -depth 8 $^ rgb:- | $(RGB2565) -rle > $@
+ALL_PREBUILT += $(init_splash)
+endif
+
