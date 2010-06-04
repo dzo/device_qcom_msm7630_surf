@@ -28,5 +28,5 @@ persist.cne.loc.policy.user=/system/etc/UserPolicy.xml
 persist.cne.bwbased.rat.sel=true
 persist.cne.snsr.based.rat.mgt=true
 persist.cne.bat.based.rat.mgt=true
-persist.cne.rat.acq.time.out=30
-persist.cne.rat.acq.retry.tout=30
+persist.cne.rat.acq.time.out=30000
+persist.cne.rat.acq.retry.tout=0
