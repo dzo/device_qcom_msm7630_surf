@@ -15,8 +15,3 @@
 key 231   CALL              WAKE_DROPPED
 key 102   HOME              WAKE
 key 107   ENDCALL           WAKE_DROPPED
-#Camera functions
-key 766   SNAPSHOT          WAKE
-key 528   FOCUS             WAKE
-key 418   ZOOMIN            WAKE
-key 419   ZOOMOUT           WAKE
