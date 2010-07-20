@@ -31,6 +31,7 @@ persist.cne.bat.based.rat.mgt=true
 persist.cne.rat.acq.time.out=30000
 persist.cne.rat.acq.retry.tout=0
 lpa.decode=true
+ro.hdmi.enable=true
 #
 # system props for the data modules
 #
