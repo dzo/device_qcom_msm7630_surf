@@ -15,3 +15,6 @@
 key 231   CALL              WAKE_DROPPED
 key 102   HOME              WAKE
 key 107   ENDCALL           WAKE_DROPPED
+#Volume functions
+key 5     VOLUME_UP         WAKE_DROPPED
+key 355   VOLUME_DOWN       WAKE_DROPPED
