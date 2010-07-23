@@ -108,3 +108,10 @@ $(init_splash): $(LOCAL_PATH)/initlogo.png | $(RGB2565)
 ALL_PREBUILT += $(init_splash)
 endif
 
+#----------------------------------------------------------------------
+# Radio image
+#----------------------------------------------------------------------
+TARGET_RADIO_PATH := 
+ifneq ( $(TARGET_RADIO_PATH), )
+    $(call add-radio-file,$(TARGET_RADIO_PATH))
+endif
