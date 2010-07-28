@@ -41,6 +41,6 @@ ro.use_data_netmgrd=true
 # system props for the MM modules
 #
 media.stagefright.enable-player=true
-media.stagefright.enable-meta=true
-media.stagefright.enable-scan=true
+media.stagefright.enable-meta=false
+media.stagefright.enable-scan=false
 media.stagefright.enable-http=true
