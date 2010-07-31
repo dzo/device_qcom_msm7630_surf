@@ -103,6 +103,7 @@ RGB2565 := $(HOST_OUT_EXECUTABLES)/rgb2565$(HOST_EXECUTABLE_SUFFIX)
 init_splash := $(TARGET_ROOT_OUT)/initlogo.rle
 
 $(init_splash): $(LOCAL_PATH)/initlogo.png | $(RGB2565)
+	mkdir -p $(TARGET_ROOT_OUT)
 	convert -depth 8 $^ rgb:- | $(RGB2565) -rle > $@
 ALL_PREBUILT += $(init_splash)
 endif
