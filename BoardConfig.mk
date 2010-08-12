@@ -26,6 +26,7 @@ ifeq ($(QC_PROP),true)
     HAVE_ADRENO200_FIRMWARE := true
     BOARD_USES_QCOM_AUDIO_V2 := true
     BOARD_USE_QCOM_TESTONLY := true
+    BOARD_USES_QCNE := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_GPS_LIBRARIES := libloc
