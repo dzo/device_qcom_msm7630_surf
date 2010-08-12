@@ -19,7 +19,7 @@ debug.sf.hw=1
 #
 # system props for the cne module
 #
-persist.cne.UseCne=true
+persist.cne.UseCne=false
 persist.cne.loadVendorCne=true
 persist.cne.bat.range.low.med=30
 persist.cne.bat.range.med.high=60
