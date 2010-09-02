@@ -1,7 +1,6 @@
 PRODUCT_PACKAGES := \
     IM \
     VoiceDialer \
-    SdkSetup \
     FM
 
 
