@@ -12,8 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-key 231   CALL              WAKE_DROPPED
 key 102   HOME              WAKE
+key 158   BACK              WAKE_DROPPED
+key 139   MENU              WAKE
+key 217   SEARCH            WAKE_DROPPED
+key 231   CALL              WAKE_DROPPED
 key 107   ENDCALL           WAKE_DROPPED
 #Volume functions
 key 5     VOLUME_UP         WAKE_DROPPED
