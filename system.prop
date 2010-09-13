@@ -39,6 +39,12 @@ ro.hdmi.enable=true
 ro.use_data_netmgrd=true
 
 #
+# system props for telephony modules
+#
+#device supports EHRPD
+ro.config.ehrpd=true
+
+#
 # system props for the MM modules
 #
 media.stagefright.enable-player=true
