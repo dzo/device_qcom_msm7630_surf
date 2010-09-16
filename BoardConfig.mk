@@ -49,7 +49,7 @@ endif # QC_PROP
 TARGET_HAVE_TSLIB := true
 TARGET_HAVE_HDMI_OUT := true
 #if TARGET_GRALLOC_USES_ASHMEM is enabled, set debug.sf.hw=1 in system.prop
-TARGET_GRALLOC_USES_ASHMEM := false
+TARGET_GRALLOC_USES_ASHMEM := true
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
