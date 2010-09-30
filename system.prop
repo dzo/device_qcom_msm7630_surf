@@ -55,3 +55,8 @@ media.stagefright.enable-player=true
 media.stagefright.enable-meta=false
 media.stagefright.enable-scan=false
 media.stagefright.enable-http=true
+
+#
+# system prop for opengles version
+#
+ro.opengles.version=131072
