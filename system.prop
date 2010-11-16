@@ -43,6 +43,11 @@ ro.hdmi.enable=true
 ro.use_data_netmgrd=true
 
 #
+# system props for SD card emulation of emmc partition
+#
+ro.emmc.sdcard.partition=16
+
+#
 # system props for telephony modules
 #
 #device supports EHRPD
