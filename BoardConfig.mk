@@ -75,8 +75,6 @@ BOARD_NAND_SPARE_SIZE := 128
 TARGET_USERIMAGES_USE_EXT2 := true
 TARGET_PERSISTIMAGES_USE_EXT2 := true
 
-TARGET_USES_2G_VM_SPLIT := true
-
 BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=qcom
 BOARD_EGL_CFG := device/qcom/$(TARGET_PRODUCT)/egl.cfg
 
