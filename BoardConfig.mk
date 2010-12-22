@@ -33,7 +33,7 @@ ifeq ($(QC_PROP),true)
     ifneq ($(BUILD_TINY_ANDROID), true)
     #BOARD_GPS_LIBRARIES := libloc
     BOARD_CAMERA_LIBRARIES := libcamera
-    BOARD_HAVE_BLUETOOTH := false
+    BOARD_HAVE_BLUETOOTH := true
     BOARD_HAS_QCOM_WLAN := true
     BOARD_WPA_SUPPLICANT_DRIVER := WEXT
     WPA_SUPPLICANT_VERSION := VER_0_6_X
