@@ -19,5 +19,8 @@ key 217   SEARCH            WAKE_DROPPED
 key 231   CALL              WAKE_DROPPED
 key 107   ENDCALL           WAKE_DROPPED
 #Volume functions
-key 5     VOLUME_UP         WAKE_DROPPED
-key 355   VOLUME_DOWN       WAKE_DROPPED
+key 114   VOLUME_DOWN       WAKE_DROPPED
+key 115   VOLUME_UP         WAKE_DROPPED
+#camera functions
+key 353   FOCUS             WAKE_DROPPED
+key 766   CAMERA            WAKE_DROPPED
