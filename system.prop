@@ -17,8 +17,6 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 debug.sf.hw=1
 dalvik.vm.heapsize=24m
-ro.dev.dmm=1
-dev.dmm.dpd.trigger_delay=30
 dev.pm.dyn_samplingrate=1
 
 #
