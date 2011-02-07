@@ -52,6 +52,19 @@ ALL_PREBUILT += $(file)
 $(file) : $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
 
+file := $(TARGET_OUT)/lib/modules/qce.ko
+ALL_PREBUILT += $(file)
+$(file) : $(KERNEL_OUT)/drivers/crypto/msm/qce.ko | $(ACP)
+	$(transform-prebuilt-to-target)
+
+file := $(TARGET_OUT)/lib/modules/qcedev.ko
+ALL_PREBUILT += $(file)
+$(file) : $(KERNEL_OUT)/drivers/crypto/msm/qcedev.ko | $(ACP)
+	$(transform-prebuilt-to-target)
+
+$(KERNEL_OUT)/drivers/crypto/msm/qce.ko \
+$(KERNEL_OUT)/drivers/crypto/msm/qcedev.ko : $(TARGET_PREBUILT_INT_KERNEL)
+
 #----------------------------------------------------------------------
 # Key mappings
 #----------------------------------------------------------------------
