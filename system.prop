@@ -82,3 +82,8 @@ ro.bluetooth.remote.autoconnect=true
 # system prop for multi rild (DSDS case)
 #
 ro.multi.rild=true
+
+#
+# system prop for Bluetooth FTP profile
+#
+ro.qualcomm.bluetooth.ftp=true
