@@ -28,6 +28,11 @@
 #
 
 on boot
+
+    # Disable idle power collapse during boot.
+    # These features will be enabled at the end of boot
+    write /sys/module/pm2/parameters/idle_sleep_mode 3
+
     # Disable keypad (except Power key) during "suspend2ram" state
     chown system system /sys/bus/platform/devices/pm8058-keypad/disable_kp
 
