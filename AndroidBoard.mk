@@ -61,10 +61,12 @@ $(file) : $(LOCAL_PATH)/fluid-keypad.kl | $(ACP)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := surf_keypad_qwerty.kcm
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_KEY_CHAR_MAP)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := surf_keypad_numeric.kcm
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_KEY_CHAR_MAP)
 
 file := $(TARGET_OUT)/etc/vold.fstab
