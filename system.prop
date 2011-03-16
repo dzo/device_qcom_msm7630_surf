@@ -85,3 +85,7 @@ ro.multi.rild=true
 # system prop for Bluetooth FTP profile
 #
 ro.qualcomm.bluetooth.ftp=true
+#
+# system property for Bluetooth discoverability time out in seconds
+# 0: Always discoverable
+debug.bt.discoverable_time=0
