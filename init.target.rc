@@ -39,6 +39,7 @@ on boot
     # 7630 target supports Warmboot capability
     setprop ro.warmboot.capability 1
 
+    write /sys/devices/i2c-0/0-0024/cyttsp_update_fw 1
 on property:hw.keyboard.disable=1
     write  /sys/bus/platform/devices/pm8058-keypad/disable_kp 1
 
