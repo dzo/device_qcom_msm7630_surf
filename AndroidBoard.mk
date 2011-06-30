@@ -102,7 +102,9 @@ endif
 #----------------------------------------------------------------------
 # Radio image
 #----------------------------------------------------------------------
-TARGET_RADIO_PATH := 
-ifneq ( $(TARGET_RADIO_PATH), )
-    $(call add-radio-file,$(TARGET_RADIO_PATH))
+ifeq ($(ADD_RADIO_FILES), true)
+radio_dir := $(LOCAL_PATH)/radio
+RADIO_FILES := $(shell cd $(radio_dir) ; find -iname *.ENC)
+$(foreach f, $(RADIO_FILES), \
+    $(call add-radio-file,radio/$(f)))
 endif
