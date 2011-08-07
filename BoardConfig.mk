@@ -25,6 +25,7 @@ ifeq ($(QC_PROP),true)
     BOARD_HAS_QCOM_WLAN := true
     BOARD_WPA_SUPPLICANT_DRIVER := WEXT
     WPA_SUPPLICANT_VERSION := VER_0_6_X
+    HOSTAPD_VERSION := VER_0_6_X
     WIFI_SDIO_IF_DRIVER_MODULE_PATH :=  "/system/lib/modules/librasdioif.ko"
     WIFI_SDIO_IF_DRIVER_MODULE_NAME :=  "librasdioif"
     WIFI_SDIO_IF_DRIVER_MODULE_ARG  := ""
