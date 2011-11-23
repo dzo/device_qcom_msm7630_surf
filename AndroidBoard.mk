@@ -39,25 +39,37 @@ $(file) : $(TARGET_PREBUILT_KERNEL) | $(ACP)
 #----------------------------------------------------------------------
 # Key mappings
 #----------------------------------------------------------------------
-file := $(TARGET_OUT_KEYLAYOUT)/surf_keypad.kl
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/surf_keypad.kl | $(ACP)
-	$(transform-prebuilt-to-target)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := surf_keypad.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
 
-file := $(TARGET_OUT_KEYLAYOUT)/msm_tma300_ts.kl
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/msm_tma300_ts.kl | $(ACP)
-	$(transform-prebuilt-to-target)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := msm_tma300_ts.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
 
-file := $(TARGET_OUT_KEYLAYOUT)/7k_handset.kl
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/7k_handset.kl | $(ACP)
-	$(transform-prebuilt-to-target)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := 7k_handset.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
 
-file := $(TARGET_OUT_KEYLAYOUT)/fluid-keypad.kl
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/fluid-keypad.kl | $(ACP)
-	$(transform-prebuilt-to-target)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := fluid-keypad.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := surf_keypad_qwerty.kcm
@@ -69,34 +81,29 @@ LOCAL_SRC_FILES := surf_keypad_numeric.kcm
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_KEY_CHAR_MAP)
 
-file := $(TARGET_OUT)/etc/vold.fstab
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/vold.fstab | $(ACP)
-	$(transform-prebuilt-to-target)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := vold.fstab
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
 
-file := $(TARGET_ROOT_OUT)/init.target.rc
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/init.target.rc | $(ACP)
-	$(transform-prebuilt-to-target)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.target.rc
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
 
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
-file := $(TARGET_OUT)/etc/wifi/wpa_supplicant.conf
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/wpa_supplicant.conf | $(ACP)
-	$(transform-prebuilt-to-target)
-endif
-
-#----------------------------------------------------------------------
-# Splash screen
-#----------------------------------------------------------------------
-ifneq ($(BUILD_TINY_ANDROID), true)
-RGB2565 := $(HOST_OUT_EXECUTABLES)/rgb2565$(HOST_EXECUTABLE_SUFFIX)
-init_splash := $(TARGET_ROOT_OUT)/initlogo.rle
-
-$(init_splash): $(LOCAL_PATH)/initlogo.png | $(RGB2565)
-	mkdir -p $(TARGET_ROOT_OUT)
-	convert -depth 8 $^ rgb:- | $(RGB2565) -rle > $@
-ALL_PREBUILT += $(init_splash)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := wpa_supplicant.conf
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
+include $(BUILD_PREBUILT)
 endif
 
 #----------------------------------------------------------------------
