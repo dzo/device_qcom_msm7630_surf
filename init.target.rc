@@ -40,6 +40,7 @@ on boot
     setprop ro.warmboot.capability 1
 
     write /sys/devices/i2c-0/0-0024/cyttsp_update_fw 1
+    exec /system/bin/sh /init.qcom.ril.path.sh
 on property:hw.keyboard.disable=1
     write  /sys/bus/platform/devices/pm8058-keypad/disable_kp 1
 
