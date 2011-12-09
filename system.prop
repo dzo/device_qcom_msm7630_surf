@@ -100,3 +100,9 @@ ro.qualcomm.bluetooth.ftp=true
 # system prop for requesting Master role in incoming Bluetooth connection.
 #
 ro.bluetooth.request.master=true
+
+#
+# system property to enforce Phone Mode view
+#
+ro.screen.layout=normal
+#
