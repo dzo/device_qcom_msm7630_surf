@@ -83,6 +83,11 @@ ro.qualcomm.bluetooth.dun=true
 ro.bluetooth.remote.autoconnect=true
 
 #
+# System prop to disable strict mode flash on display
+#
+persist.sys.strictmode.visual=false
+
+#
 # system prop for multi rild (DSDS case)
 #
 ro.multi.rild=false
