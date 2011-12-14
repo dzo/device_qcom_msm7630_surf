@@ -110,3 +110,8 @@ ro.screen.layout=normal
 #System prop for disabling the meta data mode for encoder
 #
 debug.camcorder.disablemeta=1
+
+#
+# Simulate sdcard on /data/media
+#
+persist.fuse_sdcard=false
