@@ -105,4 +105,8 @@ ro.bluetooth.request.master=true
 # system property to enforce Phone Mode view
 #
 ro.screen.layout=normal
+
 #
+#System prop for disabling the meta data mode for encoder
+#
+debug.camcorder.disablemeta=true
