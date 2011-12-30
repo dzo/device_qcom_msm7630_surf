@@ -123,3 +123,8 @@ persist.fuse_sdcard=false
 # Turn off tiled rendering
 #
 debug.enabletr=false
+
+#
+# System prop for using landscape preview layout in camera
+#
+debug.camera.landscape=true
