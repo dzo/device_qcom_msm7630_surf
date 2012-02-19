@@ -2,7 +2,7 @@
 # system.prop for surf
 #
 
-rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libpath=/system/lib/libril-qc-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
@@ -37,7 +37,7 @@ persist.cne.sync.swim.mode=false
 
 #
 lpa.decode=true
-ro.hdmi.enable=true
+ro.hdmi.enable=false
 
 #
 # system props for the data modules
@@ -133,3 +133,5 @@ debug.camera.landscape=true
 # System prop for capping scroll velocity
 #
 ro.max.fling_velocity=4000
+#
+ro.sf.lcd_density=240
