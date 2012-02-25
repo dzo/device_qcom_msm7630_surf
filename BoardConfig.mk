@@ -3,7 +3,7 @@
 # Product-specific compile-time definitions.
 #
 
-ifeq ($(QC_PROP),true)
+#ifeq ($(QC_PROP),true)
     BOARD_USES_QCOM_HARDWARE := true
     DYNAMIC_SHARED_LIBV8SO := true
     BOARD_USES_ADRENO_200 := true
@@ -38,11 +38,11 @@ ifeq ($(QC_PROP),true)
     BOARD_WLAN_DEVICE := qcwcn
     endif   # !BUILD_TINY_ANDROID
 
-else
-    BOARD_USES_GENERIC_AUDIO := true
-    USE_CAMERA_STUB := true
-
-endif # QC_PROP
+#else
+#    BOARD_USES_GENERIC_AUDIO := true
+#    USE_CAMERA_STUB := true
+#
+#endif # QC_PROP
 
 TARGET_HAVE_TSLIB := true
 TARGET_HAVE_HDMI_OUT := true
