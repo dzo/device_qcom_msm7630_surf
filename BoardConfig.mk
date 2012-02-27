@@ -3,7 +3,24 @@
 # Product-specific compile-time definitions.
 #
 
-#ifeq ($(QC_PROP),true)
+    WPA_SUPPLICANT_VERSION := VER_0_6_X
+    HOSTAPD_VERSION := VER_0_6_X
+    BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50001
+    BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+    BOARD_CAMERA_LIBRARIES := libcamera
+    BOARD_HAVE_BLUETOOTH := true
+    BOARD_HAVE_QCOM_FM := true
+    BOARD_HAS_QCOM_WLAN := true
+    BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+    WIFI_SDIO_IF_DRIVER_MODULE_PATH :=  "/system/lib/modules/librasdioif.ko"
+    WIFI_SDIO_IF_DRIVER_MODULE_NAME :=  "librasdioif"
+    WIFI_SDIO_IF_DRIVER_MODULE_ARG  := ""
+    WIFI_DRIVER_FW_PATH_STA := "sta"
+    WIFI_DRIVER_FW_PATH_AP  := "ap"
+    WIFI_DRIVER_FW_PATH_P2P := "p2p"
+    BOARD_WLAN_DEVICE := qcwcn
+
+ifeq ($(QC_PROP),true)
     BOARD_USES_QCOM_HARDWARE := true
     DYNAMIC_SHARED_LIBV8SO := true
     BOARD_USES_ADRENO_200 := true
@@ -19,30 +36,12 @@
     USE_OPENGL_RENDERER := true
     BOARD_USE_QCOM_LLVM_CLANG_RS := true
 
-    ifneq ($(BUILD_TINY_ANDROID), true)
-    BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50001
-    BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
-    BOARD_CAMERA_LIBRARIES := libcamera
-    BOARD_HAVE_BLUETOOTH := true
-    BOARD_HAVE_QCOM_FM := true
-    BOARD_HAS_QCOM_WLAN := true
-    BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-    WPA_SUPPLICANT_VERSION := VER_0_6_X
-    HOSTAPD_VERSION := VER_0_6_X
-    WIFI_SDIO_IF_DRIVER_MODULE_PATH :=  "/system/lib/modules/librasdioif.ko"
-    WIFI_SDIO_IF_DRIVER_MODULE_NAME :=  "librasdioif"
-    WIFI_SDIO_IF_DRIVER_MODULE_ARG  := ""
-    WIFI_DRIVER_FW_PATH_STA := "sta"
-    WIFI_DRIVER_FW_PATH_AP  := "ap"
-    WIFI_DRIVER_FW_PATH_P2P := "p2p"
-    BOARD_WLAN_DEVICE := qcwcn
-    endif   # !BUILD_TINY_ANDROID
 
-#else
+else
 #    BOARD_USES_GENERIC_AUDIO := true
 #    USE_CAMERA_STUB := true
 #
-#endif # QC_PROP
+endif # QC_PROP
 
 TARGET_HAVE_TSLIB := true
 TARGET_HAVE_HDMI_OUT := true
