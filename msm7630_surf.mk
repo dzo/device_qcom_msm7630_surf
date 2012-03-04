@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += MagicSmokeWallpapers
 PRODUCT_PACKAGES += NoiseField
 PRODUCT_PACKAGES += PhaseBeam
 PRODUCT_PACKAGES += strace
-PRODUCT_PACKAGES += busybox Superuser libhwrpc.so oem_rpc_svc
+PRODUCT_PACKAGES += busybox Superuser libhwrpc.so oem_rpc_svc lib_driver_cmd_wext libjni_pinyinime
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/qcom/msm7630_surf/overlay

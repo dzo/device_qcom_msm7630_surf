@@ -16,21 +16,20 @@
 ** limitations under the License.
 */
 -->
-
 <device name="Android">
   <item name="none">0</item>
-  <item name="screen.on">100</item>
-  <item name="bluetooth.active">142</item> <!-- In call -->
+  <item name="screen.on">40</item>
+  <item name="bluetooth.active">80</item> <!-- In call -->
   <item name="bluetooth.on">0.3</item>
-  <item name="screen.full">160</item>
+  <item name="screen.full">120</item>
   <item name="wifi.on">4</item>
-  <item name="wifi.active">120</item>
-  <item name="wifi.scan">220</item>
+  <item name="wifi.active">100</item>
+  <item name="wifi.scan">120</item>
   <item name="dsp.audio">88</item>
   <item name="dsp.video">88</item>
   <item name="radio.active">300</item>
-  <item name="gps.on">170</item>
-  <item name="battery.capacity">1390</item>
+  <item name="gps.on">70</item>
+  <item name="battery.capacity">1400</item>
   <item name="radio.scanning">70</item>
   <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
       <value>3</value>
@@ -50,13 +49,13 @@
   <item name="cpu.idle">2.8</item>
   <!-- Power consumption at different speeds -->
   <array name="cpu.active">
-      <value>66.6</value>
-      <value>84</value>
-      <value>90.8</value>
-      <value>96</value>
-      <value>105</value>
-      <value>134.5</value>
-      <value>148.5</value>
-      <value>168.4</value>
+      <value>30</value>
+      <value>40</value>
+      <value>50</value>
+      <value>60</value>
+      <value>75</value>
+      <value>80</value>
+      <value>110</value>
+      <value>120</value>
   </array>
 </device>
