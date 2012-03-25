@@ -136,3 +136,5 @@ debug.camera.landscape=true
 ro.max.fling_velocity=4000
 #
 ro.sf.lcd_density=240
+# BT power class (1,2 or 3)
+qcom.bt.dev_power_class=2
