@@ -52,6 +52,6 @@ on property:hw.keyboard.disable=0
     write  /sys/bus/platform/devices/pm8058-keypad/disable_kp 0
 
 on property:sys.radio.shutdown=true
-    write  /sys/devices/platform/rs300000a7.65536/force_sync 1
-    write  /sys/devices/platform/rs300100a7.65536/force_sync 1
-
+   exec /system/bin/sh /system/etc/init.qcom.efs.sync.sh
+   user root
+   group root
