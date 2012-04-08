@@ -23,7 +23,7 @@
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
-
+    <bool name="config_disableMenuKeyInLockScreen">true</bool>
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 zones as follows:
 
@@ -68,12 +68,12 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
+        <item>63</item>
+        <item>63</item>
+        <item>63</item>
+        <item>127</item>
+        <item>191</item>
         <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -107,8 +107,6 @@
          The driver commands needed to support the feature are BGSCAN-START and BGSCAN-STOP -->
     <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
 
-    <!-- Integer indicating wpa_supplicant scan interval in milliseconds -->
-    <integer translatable="false" name="config_wifi_supplicant_scan_interval">60000</integer>
 
     <!-- Integer indicating the framework scan interval in milliseconds. This is used in the scenario
          where the chipset does not support background scanning (config_wifi_background_scan_suport
