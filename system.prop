@@ -36,7 +36,7 @@ persist.cne.rat.acq.retry.tout=0
 persist.cne.sync.swim.mode=false
 
 #
-lpa.decode=true
+lpa.decode=false
 ro.hdmi.enable=false
 
 #
